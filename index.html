@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome Dino Game</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Retro pixel font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <div class="title">T-REX RUNNER</div>
+      <div class="sound-toggle-btn" id="soundToggle" title="Toggle Sound">🔊 Sound: ON</div>
+    </div>
+
+    <div class="game-wrapper">
+      <canvas id="gameCanvas" width="800" height="250"></canvas>
+
+      <!-- Overlay screens -->
+      <div id="startScreen" class="overlay-screen">
+        <h2>PRESS SPACE OR TAP TO JUMP</h2>
+        <p>Avoid cacti and pterodactyls!</p>
+        <button id="startBtn" class="btn">START GAME</button>
+      </div>
+
+      <div id="gameOverScreen" class="overlay-screen hidden">
+        <h2>GAME OVER</h2>
+        <p>SCORE: <span id="finalScore">0</span></p>
+        <button id="restartBtn" class="btn">PLAY AGAIN</button>
+      </div>
+    </div>
+
+    <div class="controls-hint">
+      <span><strong>Controls:</strong> <kbd>Space</kbd> / <kbd>↑</kbd> to Jump | <kbd>↓</kbd> to Duck | Tap / Click to Jump</span>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
+
